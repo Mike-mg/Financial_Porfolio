@@ -1,0 +1,39 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>Financial Porfolio</title>
+    <link rel="stylesheet" href="{% static 'dashboard/base.css' %}" />
+</head>
+
+<body>
+
+    <section class="index">
+
+        <section class="menu">
+
+            <h1 class="title_menu">Financial<br>Porfolio</h1>
+
+            <aside>
+
+                <a class="label_menu" href="{% url 'dashboard' %}">Dashboard</a>
+                <a class="label_menu" href="{% url 'asset_buy_detail' %}">All Buy Assets</a>
+                <a class="label_menu" href="{% url 'invest_detail' %}">Investisments</a>
+
+            </aside>
+                
+        </section>
+
+        <section class="import_content">
+
+            {% block content %}
+            {% endblock %}
+
+        </section>
+
+    </section>
+    
+</body>
+
+</html>

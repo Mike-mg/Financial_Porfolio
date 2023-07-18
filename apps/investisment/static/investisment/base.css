@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Verdana;
+    background: linear-gradient(45deg, #481c99, #780f86 ,#532958);
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    box-shadow: 1px 1px 10px 0px rgb(236, 255, 254);
+    border: 2px groove rgb(179, 37, 160);
+    border-radius: 50px;
+    margin-bottom: 100px;
+    width: 80%;
+}
+
+.title_menu {
+    text-align: center;
+    color:beige;
+    margin-right: 200px;
+    margin-left: 50px;
+}
+
+.label_menu {
+    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border: 1px solid rgb(78, 17, 83);
+    color: beige;
+    text-decoration: none;
+    font-size: 17px;
+    list-style-type: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0px rgb(33, 12, 43);
+}
+
+.label_menu:hover{
+    box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+}
+
+.import_content {
+    width: 100%;
+}

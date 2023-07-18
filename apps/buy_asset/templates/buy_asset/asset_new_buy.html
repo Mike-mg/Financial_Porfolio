@@ -1,0 +1,26 @@
+{% extends 'buy_asset/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'buy_asset/asset_new_buy.css' %}" />
+</head>
+
+
+<section class="nav_page">
+
+    <h2 class="title_page">New Buy Asset</h2>
+
+</section>
+
+<form class="form_new_buy" action="" method="post">
+
+    {% csrf_token %}
+    {{ new_buy_asset.as_p }}
+
+    <input type="submit" value="Valider">
+
+</form>
+
+{% endblock %}
