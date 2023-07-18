@@ -10,18 +10,17 @@ class BuyAsset(models.Model):
 
     @admin.display(description='name')
     def asset_name(self) -> str:
-
         return self.name.capitalize()
 
     @admin.display()
     def asset_tokens(self) -> float:
         return f"{self.amount / self.price:.8f}"
 
-    @admin.display(description='amount')
+    @admin.display()
     def asset_amount(self) -> float:
         return f"{'$'} {self.amount:.3f}"
 
-    @admin.display(description='price')
+    @admin.display()
     def asset_price(self) -> float:
         return f"{'$'} {self.price:.8f}"
 

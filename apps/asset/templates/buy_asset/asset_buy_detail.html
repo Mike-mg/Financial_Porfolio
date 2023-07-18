@@ -11,7 +11,7 @@
 
     <h2 class="title_page">Details Investiments</h2>
 
-    <a class="link_new_buy_asset" href="{% url 'form_asset_new_buy' %}">[ Enter New Buy Asset ]</a>
+    <a class="link_new_buy_asset" href="{% url 'buy_new_asset' %}">[ Enter New Buy Asset ]</a>
 
 </section>
 
@@ -36,9 +36,9 @@
 
             <tr class="label_detail_buy">
                 <td class="detail_buy">{{ asset.name|capfirst }}</td>
-                <td class="detail_buy">$ {{ asset.asset_price|floatformat:8 }}</td>
+                <td class="detail_buy">$ {{ asset.price|floatformat:8 }}</td>
                 <td class="detail_buy">$ {{ asset.amount|floatformat:3 }}</td>
-                <td class="detail_buy">{{ asset.tokens|floatformat:8 }}</td>
+                <td class="detail_buy">{{ asset.asset_tokens|floatformat:8 }}</td>
                 <td class="detail_buy"><a href="{% url 'asset_sell' asset.id %}">[ Vendre ]</a></td>
             </tr>
 

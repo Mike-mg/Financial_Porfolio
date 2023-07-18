@@ -12,7 +12,7 @@ def asset_buy_detail(request):
                   {'all_assets_buy': buy_asset_by_order})
 
 
-def form_asset_new_buy(request):
+def buy_new_asset(request):
 
     usdt = BuyAsset.objects.get(name='usdt')
 

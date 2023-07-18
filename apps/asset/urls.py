@@ -8,8 +8,8 @@ urlpatterns = [
           name='asset_buy_detail'),
 
      path('asset_new_buy.html/',
-          views.form_asset_new_buy,
-          name='form_asset_new_buy'),
+          views.buy_new_asset,
+          name='buy_new_asset'),
 
      path('asset_buy_detail/<int:asset_id>/sell/',
           views.asset_sell,
