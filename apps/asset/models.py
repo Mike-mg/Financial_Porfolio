@@ -36,3 +36,10 @@ class BuyAsset(models.Model):
     @admin.display()
     def asset_price(self) -> float:
         return f"{'$'} {self.price:.8f}"
+
+    def current_invest(self):
+
+        current_all_buy_assets = sum(
+            amount.amount for amount in BuyAsset.objects.all())
+
+        return current_all_buy_assets

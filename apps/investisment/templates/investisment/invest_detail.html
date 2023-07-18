@@ -35,7 +35,7 @@
             
             <tr class="label_detail_invest">
                 <td class="detail_invest">{{ invest.date }}</td>
-                <td class="detail_invest">$ {{ invest.new_invest|floatformat:2 }}</td>
+                <td class="detail_invest">$ {{ invest.invest|floatformat:2 }}</td>
                 <td><a class="delete_detail_invest" href="{% url 'invest_delete' invest.id %}">[ Supprimer ]</a></td>
             </tr>
 
