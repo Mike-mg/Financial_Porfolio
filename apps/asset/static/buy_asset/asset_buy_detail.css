@@ -20,40 +20,48 @@
 }
 
 .section_buyasset {
-  display: flex;
-  justify-content: center;
   margin: auto;
   margin-bottom: 100px;
 }
 
+.table {
+  width: 75%;
+  margin: auto;
+
+}
+
 .label_table_buyasset {
   display: flex;
-  justify-content: center;
+  margin: auto;
+  width: 85%;
   padding: 5px;
   border: 3px ridge rgb(165, 33, 177);
   border-radius: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 1%;
 }
 
 .label {
-  display: flex;
-  justify-content: center;
-  width: 300px;
+  width: 20%;
   color: beige;
+
 }
 
 .label_detail_buy {
   display: flex;
+  margin: auto;
+  width: 85%;
+
 }
 
 .detail_buy {
-  width: 300px;
+  width: 20%;
   color: beige;
   text-align: center;
+
 }
 
 .detail_buy a {
-  width: 300px;
+  width: 10%;
   color: rgb(240, 12, 12);
   text-align: center;
   text-decoration: none;

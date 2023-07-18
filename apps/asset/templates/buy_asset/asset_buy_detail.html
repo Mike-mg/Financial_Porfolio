@@ -17,13 +17,14 @@
 
 <section class="section_buyasset">
     
-    <table>
+    <table class="table">
 
         <tr class="label_table_buyasset">
             <th class="label">Asset</th>
             <th class="label">Price asset</th>
             <th class="label">Amount</th>
             <th class="label">Nb tokens</th>
+            <th class="label">Blockchain</th>
             <th class="label"></th>
         </tr>
 
@@ -39,6 +40,7 @@
                 <td class="detail_buy">$ {{ asset.price|floatformat:8 }}</td>
                 <td class="detail_buy">$ {{ asset.amount|floatformat:3 }}</td>
                 <td class="detail_buy">{{ asset.asset_tokens|floatformat:8 }}</td>
+                <td class="detail_buy">{{ asset.blockchain|capfirst }}</td>
                 <td class="detail_buy"><a href="{% url 'asset_sell' asset.id %}">[ Vendre ]</a></td>
             </tr>
 

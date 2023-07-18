@@ -8,5 +8,6 @@ class DisplayAssetBuy(admin.ModelAdmin):
     list_display = ['asset_name',
                     'asset_price',
                     'asset_amount',
-                    'asset_tokens'
+                    'asset_tokens',
+                    'blockchain'
                     ]

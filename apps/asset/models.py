@@ -4,9 +4,22 @@ from django.db import models
 
 class BuyAsset(models.Model):
 
+    class Blockchain(models.TextChoices):
+        Ethereum = 'Ethereum'
+        Bsc = 'Bsc'
+        Bitcoin = 'Bitcoin'
+        Avalanche = 'Avalanche'
+        Polkadot = 'Polkadot'
+        Oasis = 'Oasis'
+        Galeon = 'Galeon'
+        Harmony = 'Harmony'
+        Autres = 'Autres'
+
     name = models.fields.CharField(max_length=15)
     price = models.fields.FloatField()
     amount = models.fields.FloatField()
+    blockchain = models.fields.CharField(choices=Blockchain.choices,
+                                         max_length=25)
 
     @admin.display(description='name')
     def asset_name(self) -> str:
@@ -23,20 +36,3 @@ class BuyAsset(models.Model):
     @admin.display()
     def asset_price(self) -> float:
         return f"{'$'} {self.price:.8f}"
-
-
-class Blockchain(models.Model):
-
-    class BlockchainName(models.TextChoices):
-        Ethereum = 'Ethereum'
-        Bsc = 'Bsc'
-        Bitcoin = 'Bitcoin'
-        Avalanche = 'Avalanche'
-        Polkadot = 'Polkadot'
-        Oasis = 'Oasis'
-        Galeon = 'Galeon'
-        Harmony = 'Harmony'
-        Autres = 'Autres'
-
-    blockchain = models.fields.CharField(choices=BlockchainName.choices,
-                                         max_length=25)
