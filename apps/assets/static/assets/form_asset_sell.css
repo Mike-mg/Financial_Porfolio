@@ -1,0 +1,85 @@
+.nav_page {
+    display: flex;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(134, 28, 160), rgba(255,0,128), rgba(56,2,155,0));
+    border-image-slice: 1;
+    padding-left: 50px;
+    margin-bottom: 100px;
+    color: beige;
+  }
+
+  .title_page {
+    margin-right: 50px;
+  }
+  
+.validate {
+    display: flex;
+    justify-content: center;
+    color: beige;
+    text-decoration: underline;
+}
+
+.form_asset_sell {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+    border:2px solid rgb(91, 7, 119);
+    margin-bottom: 25px;
+}
+
+.form_asset_sell p {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    width:200px;
+    color: beige;
+}
+
+.form_asset_sell p label {
+    margin-bottom: 5px;
+}
+
+.form_asset_sell p input {
+    text-align: center;    
+    width:200px;
+    padding: 5px;
+    border: 2px solid rgb(135, 2, 153);
+    box-shadow: 0px 0px 3px 1px rgb(255, 255, 255);
+    border-radius: 25px;
+
+}
+
+.form_asset_sell input[type=submit] {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:150px;
+    margin-top: 50px;
+    padding: 5px;
+    border: 2px solid rgb(135, 2, 153);
+    box-shadow: 0px 0px 3px 1px rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.errorlist {
+    text-align: center;
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    color: beige;
+    list-style-type: none;
+    box-shadow: inset 0px 0px 3px 1px black;
+}
+
+.return_buy_asset a{
+    display: flex;
+    justify-content: center;
+    color: beige;
+    text-decoration: none;
+}

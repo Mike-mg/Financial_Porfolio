@@ -1,0 +1,50 @@
+.nav_page {
+    display: flex;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(134, 28, 160), rgba(255,0,128), rgba(56,2,155,0));
+    border-image-slice: 1;
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+
+.title_page {
+    color:beige;
+    margin-right: 50px;
+}
+
+.invest_delete {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgb(196, 8, 8);
+    border:2px solid rgb(91, 7, 119);
+    color: beige;
+}
+
+.aside_invest_delete {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: inset 0px 0px 10px 1px rgb(15, 15, 15);
+}
+
+.form_invest_delete {
+    display: flex;
+    justify-content: end;
+}
+
+.form_invest_delete input{
+    color: brown;
+}
+
+.link_retour_menu {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: beige;
+}

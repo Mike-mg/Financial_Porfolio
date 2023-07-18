@@ -1,0 +1,26 @@
+{% extends 'assets/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'assets/new_invest.css' %}" />
+</head>
+
+
+<section class="nav_page">
+
+    <h2 class="title_page">New Investisments</h2>
+
+</section>
+
+<form class="form_new_invest" action="" method="POST">
+
+    {% csrf_token %}
+    {{ new_invest.as_p }}
+
+    <input type="submit" value="Enregistrer">
+
+</form>
+
+{% endblock %}

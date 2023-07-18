@@ -1,0 +1,58 @@
+{% extends 'assets/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'assets/dashboard.css' %}" />
+</head>
+
+
+<section class="nav_page">
+
+    <h2 class="title_page">Dashboard</h2>
+
+</section>
+
+<section class="section_dashboard">
+
+    <aside class="aside_dashboard">
+        <p class="title_aside">Total investisment</a></p>
+        <hr>
+        <p class="value_aside">$ {{ total_invest|floatformat:2 }}</p>
+    </aside>
+
+    <aside class="aside_dashboard">
+        <p class="title_aside">Total investisment actually</p>
+        <hr>
+        <p class="value_aside">$ {{ total_invest_actual|floatformat:2 }}</p>
+    </aside>
+
+    <aside class="aside_dashboard">
+        <p class="title_aside">Value Profit</p>
+        <hr>
+        <p class="value_aside">$ {{ profit_actual|floatformat:2 }}</p>
+    </aside>
+
+    <aside class="aside_dashboard">
+        <p class="title_aside">New Insert</p>
+        <hr>
+        <p class="value_aside">No Data</p>
+    </aside>
+
+    <aside class="aside_dashboard">
+        <p class="title_aside">New Insert</p>
+        <hr>
+        <p class="value_aside">No Data</p>
+    </aside>
+
+    <aside class="aside_dashboard">
+        <p class="title_aside">New Insert</p>
+        <hr>
+        <p class="value_aside">No Data</p>
+    </aside>
+    
+</section>
+
+{% endblock %}
+

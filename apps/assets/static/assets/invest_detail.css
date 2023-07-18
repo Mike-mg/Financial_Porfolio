@@ -1,0 +1,88 @@
+.nav_page {
+    display: flex;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(134, 28, 160), rgba(255,0,128), rgba(56,2,155,0));
+    border-image-slice: 1;
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+
+.title_page {
+    color:beige;
+    margin-right: 50px;
+}
+
+.link_new_invest {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: beige;
+}
+
+.section_invest {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.label_table_invest {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: 3px ridge rgb(165, 33, 177);
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+.delete_detail_invest {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: red;
+    width: 300px;
+}
+
+.label_th {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    color: beige;
+}
+
+.label_detail_invest {
+    display: flex;
+    justify-content: center;
+}
+
+.detail_invest{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    color: beige;
+    text-decoration: none;
+}
+
+.container_total_invest {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+    border:2px solid rgb(91, 7, 119);
+}
+
+.total_invest{
+    font-size: 20px;
+    color:beige;
+}
+
+.total_invest_place_end {
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    color:beige;
+}

@@ -1,0 +1,43 @@
+{% extends 'assets/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'assets/invest_delete.css' %}" />
+</head>
+
+<section class="nav_page">
+
+    <h2 class="title_page">Validation Delete Investisment</h2>
+
+</section>
+
+<section class="invest_delete">
+
+    <p>Etes vous sur de vouloir supprimer cette entrée d'investissement ?</p>
+
+    <aside class="aside_invest_delete">
+
+        <ul>
+
+            <li>$ {{ invest.new_invest }}</li>
+            <li>{{ invest.date }}</li>
+
+        </ul>
+
+        <form class="form_invest_delete" action="" method="post">
+
+            {% csrf_token %}
+
+            <input type="submit" value="Supprimer">
+        </form>
+
+    </aside>
+
+</section>
+
+<a class="link_retour_menu" href="{% url 'invest_detail' %}">[ Retour au detail des investissements ]</a>
+
+
+{% endblock %}

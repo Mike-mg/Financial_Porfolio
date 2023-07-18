@@ -1,0 +1,60 @@
+{% extends 'assets/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'assets/invest_detail.css' %}" />
+</head>
+
+<section class="nav_page">
+
+    <h2 class="title_page">Details Investiments</h2>
+
+    <a class="link_new_invest" href="{% url 'form_new_invest' %}">[ Enter New Investisments ]</a>
+
+</section>
+
+<section class="section_invest">
+
+    <table>
+    
+        <tr class="label_table_invest">
+            <th class="label_th">Date</th>
+            <th class="label_th">Amount invest</th>
+            <th class="label_th"></th>
+        </tr>
+        
+        <tbody>
+
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+            
+            {% for invest in invest_sort_by_date %}
+            
+            <tr class="label_detail_invest">
+                <td class="detail_invest">{{ invest.date }}</td>
+                <td class="detail_invest">$ {{ invest.new_invest|floatformat:2 }}</td>
+                <td><a class="delete_detail_invest" href="{% url 'invest_delete' invest.id %}">[ Supprimer ]</a></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+            {% endfor %}
+        
+            <tr class="container_total_invest">
+                <td class="total_invest">Total invest</td>
+                <td class="total_invest"><hr></td>
+                <td class="total_invest_place_end">$ {{ total_invest|floatformat:2 }}</td>
+            </tr>
+
+        </tbody>
+        
+    </table>
+
+
+</section>
+
+{% endblock %}
