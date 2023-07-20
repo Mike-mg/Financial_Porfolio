@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
-from .forms import FormNewInvestisment
+from .forms import FormInvestisment
 from .models import Investisment
 
 
 def invest_detail(request):
+    """
+    return invest detail sort by date and total invest
+    """
 
     all_investisment = Investisment()
 
@@ -14,6 +17,9 @@ def invest_detail(request):
 
 
 def invest_delete(request, invest_id):
+    """
+    forms delete invest
+    """
 
     invest = Investisment.objects.get(id=invest_id)
 
@@ -30,10 +36,13 @@ def invest_delete(request, invest_id):
 
 
 def form_new_invest(request):
+    """
+    form new invest
+    """
 
     if request.method == 'POST':
 
-        new_invest = FormNewInvestisment(request.POST)
+        new_invest = FormInvestisment(request.POST)
 
         if new_invest.is_valid():
 
@@ -43,7 +52,7 @@ def form_new_invest(request):
 
     else:
 
-        new_invest = FormNewInvestisment()
+        new_invest = FormInvestisment()
 
     return render(request,
                   'investisment/invest_new_invest.html',

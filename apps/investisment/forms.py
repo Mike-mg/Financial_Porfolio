@@ -2,7 +2,10 @@ from django import forms
 from .models import Investisment
 
 
-class FormNewInvestisment(forms.ModelForm):
+class FormInvestisment(forms.ModelForm):
+    """
+    forms investisment
+    """
 
     date = forms.DateField(label_suffix='',
                            error_messages={

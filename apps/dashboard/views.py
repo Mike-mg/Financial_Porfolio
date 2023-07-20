@@ -4,6 +4,9 @@ from apps.asset.models import BuyAsset
 
 
 def dashboard(request):
+    """
+    show dashboard and detail investisment
+    """
 
     objects_investisments = Investisment()
     objects_buy_asset = BuyAsset()

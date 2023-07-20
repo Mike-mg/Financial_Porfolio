@@ -21,11 +21,15 @@ class Investisment(models.Model):
         return sum amount all objects investisment
         """
 
-        all_amount_investisment = sum(amount.invest for amount in Investisment.objects.all()) # noqa
+        all_amount_investisment = sum(
+            amount.invest for amount in Investisment.objects.all())
 
         return all_amount_investisment
 
     def profit(self):
+        """
+        calculate the profit actual
+        """
 
         objects_buy_asset = BuyAsset()
 
