@@ -3,7 +3,10 @@ from .models import BuyAsset
 
 
 @admin.register(BuyAsset)
-class DisplayAssetBuy(admin.ModelAdmin):
+class DisplayBuyAsset(admin.ModelAdmin):
+    """
+    Format show all buys assets in table
+    """
 
     list_display = ['asset_name',
                     'asset_price',

@@ -50,7 +50,11 @@
   display: flex;
   margin: auto;
   width: 85%;
+}
 
+.label_detail_buy:hover {
+  background-color: rgb(136, 42, 120);
+  border-radius: 25px;
 }
 
 .detail_buy {

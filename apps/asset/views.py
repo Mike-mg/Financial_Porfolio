@@ -1,18 +1,24 @@
 from django.shortcuts import render, redirect
 from .models import BuyAsset
-from .forms import FormAsset, FormAssetSell
+from .forms import FormAsset
 
 
 def asset_buy_detail(request):
+    """
+    Return object BuyAsset in order by 'amount'
+    """
 
     buy_asset_by_order = reversed(BuyAsset.objects.order_by('amount'))
 
     return render(request,
-                  'buy_asset/asset_buy_detail.html',
+                  'asset/asset_buy_detail.html',
                   {'all_assets_buy': buy_asset_by_order})
 
 
 def buy_new_asset(request):
+    """
+    Form for new buy asset
+    """
 
     usdt = BuyAsset.objects.get(name='usdt')
 
@@ -38,18 +44,21 @@ def buy_new_asset(request):
         new_buy_asset = FormAsset()
 
     return render(request,
-                  'buy_asset/asset_new_buy.html',
+                  'asset/asset_new_buy.html',
                   {'new_buy_asset': new_buy_asset}
                   )
 
 
 def asset_sell(request, asset_id):
+    """
+    Form for sell buy asset
+    """
 
     asset = BuyAsset.objects.get(id=asset_id)
 
     if request.method == 'POST':
 
-        form = FormAssetSell(request.POST, instance=asset)
+        form = FormAsset(request.POST, instance=asset)
 
         if form.is_valid():
 
@@ -65,6 +74,6 @@ def asset_sell(request, asset_id):
 
     else:
 
-        form = FormAssetSell(instance=asset)
+        form = FormAsset(instance=asset)
 
-    return render(request, 'buy_asset/form_asset_sell.html', {'form': form})
+    return render(request, 'asset/asset_sell.html', {'form': form})
